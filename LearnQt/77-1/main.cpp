@@ -1,9 +1,10 @@
 #include <QtCore/QCoreApplication>
-
+#include "Bank.h"
 #include <QThread>
 #include <QMutex>
 #include <QDebug>
 #include <QList>
+
 
 class Customer : public QThread
 {
@@ -172,27 +173,29 @@ int main(int argc, char *argv[])
 {
 	QCoreApplication a(argc, argv);
 
-	Customer p(4, 8);
-	Customer q(2, 3);
-	Customer r(2, 11);
+	//Customer p(4, 8);
+	//Customer q(2, 3);
+	//Customer r(2, 11);
 
-	Bank bank(2);
+	//Bank bank(2);
 
-	p.setObjectName("P");
-	q.setObjectName("Q");
-	r.setObjectName("R");
+	//p.setObjectName("P");
+	//q.setObjectName("Q");
+	//r.setObjectName("R");
 
-	bank.setObjectName("Bank");
+	//bank.setObjectName("Bank");
 
-	bank.addCustomer(&p);
-	bank.addCustomer(&q);
-	bank.addCustomer(&r);
+	//bank.addCustomer(&p);
+	//bank.addCustomer(&q);
+	//bank.addCustomer(&r);
 
-	p.start();
-	q.start();
-	r.start();
+	//p.start();
+	//q.start();
+	//r.start();
 
-	bank.start();
+	//bank.start();
+
+	TestBankAlgorithm();
 
 	return a.exec();
 }
